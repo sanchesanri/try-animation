@@ -1,0 +1,28 @@
+
+
+.btn{
+    display: inline-flex;
+    border:none;
+    margin: 0;
+    padding: 10px 30px;
+    border-radius: 3px;
+    background-color: teal;
+    color: snow;
+
+    font: inherit;
+    cursor: pointer;
+
+
+    transition-property: background-color, color;
+    transition-duration: 250ms, 1000ms;
+    transition-timing-function: cubic-bazier(0.4, 0, 0.2, 1), cubic-bazier(0.4, 0, 0.2, 1);
+
+
+}
+
+.btn:hover,
+.btn:focus{
+    background-color: indianred;
+    color:khaki;
+
+}
