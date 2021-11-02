@@ -19,7 +19,7 @@ img{
     margin-right: auto;
 
      width: 400px;
-     overflow: hidden;
+     
      
      transition-property: opacity;
     transition-duration: 700ms;
@@ -33,6 +33,7 @@ img{
 
 .product-thumb{
     position: relative;
+    overflow: hidden;
 
 }
 
@@ -52,26 +53,44 @@ img{
     transform: translate(-100%);
     transition-duration: 500ms;
     transition-timing-function: ease-in;
-    /* opacity: 0; */
+    opacity: 0;
 }
 
 .products:hover .product-thumb::before{
     transform: translate(0);
 }
 
-/* .product-thumb:hover::before{
-    transform: translate(0);
+/* --Виезд иконок при ховере-- */
+.product-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     
+    background-color: rgb(0, 0, 139, .3);
+    transform: translate(-100%);
+    transition-duration: 500ms;
+    transition-timing-function: ease-in;
+    /* opacity: 0; */
+}
+
+.products:hover .product-overlay{
+    transform: translate(0);
+}
+
+
+
+/* .product-thumb:hover::before{
+    transform: translate(0);  
     opacity: 1;
 } */
 
 /* .product-action{
-
 position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%); */
-
 /* display: flex; */
 }
 

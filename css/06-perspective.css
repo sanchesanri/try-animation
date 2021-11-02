@@ -1,0 +1,22 @@
+.scene {
+  width: 300px;
+  height: 300px;
+  border: 3px solid teal;
+
+  perspective: 400px;
+}
+
+.box {
+  height: 100%;
+  background-color: red;
+  background-image: url('../images/astronaut\ 1.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotateY(0) rotateX(0);
+  transition: transform 500ms linear;
+}
+
+.scene:hover .box {
+  transform: rotateY(180deg) rotateX(80deg);
+}
