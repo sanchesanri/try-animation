@@ -1,39 +1,110 @@
-.backdrop {
+.backdrop{
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-
-  opacity: 1;
-  transition: opacity 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  background-color: rgb(0, 128, 128, 0.5);
+  
 }
 
-.backdrop.is-hidden {
+.backdrop.is-hidden{
   opacity: 0;
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.9);
-  /* не забывать ставить еще одно свойство translate что бы не ламать геометрию появления модалки */
-
-  /* как будто появляется от нас */
-  /* transform: scale(1.1) translate(-50%, -50%); */
-}
-
-.modal {
+.modal{
   position: absolute;
   top: 50%;
   left: 50%;
+  transform:translate(-50%, -50%);
 
-  min-width: 300px;
-  min-height: 400px;
-  padding: 15px;
 
-  background-color: #fff;
-
-  transform: scale(1) translate(-50%, -50%);
-  transition: transform 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  min-width: 400px;
+  min-height: 300px;
+  background-color: thistle;
+  
 }
+
+.container{
+  overflow: hidden;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(165deg,#5200ff 0%, #ffff00 30%, #00efff 40%, #ff0089 60%, #00ff00 80%);
+  border-radius: 50%;
+  box-shadow: 2px 3px 45px 19px rgba(140,43,43,0.77);
+  /* border: 3px solid burlywood; */
+}
+
+
+
+.container:hover{
+  animation: magic 2000ms linear infinite;
+  /* animation-play-state: paused; */
+}
+
+@keyframes magic {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.a1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  background:linear-gradient(45deg,#ff0000 0%, #00ff00 100%);
+}
+
+.a2{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(125deg,#00ff00 0%, #1500ff 100%);
+}
+
+.a3{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(316deg,#dbff00 0%, #ff0000 100%);
+}
+.a4{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(225deg,#1500ff 0%, #dbff00 100%);
+}
+
+
+.btn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border:none;
+  box-shadow: 2px 3px 45px 19px rgba(140,43,43,0.77) inset;
+}
+
+
+
